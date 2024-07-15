@@ -1,0 +1,277 @@
+/* Globalne style */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stylizacja nagłówka i nawigacji */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Utrzymuje nagłówek nad innymi elementami */
+}
+
+/* Stylizacja sekcji strony */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    position: sticky;
+    top: 60px; /* Odległość od góry, aby była widoczna część poprzedniej sekcji */
+    z-index: 500; /* Niższy indeks niż nagłówek */
+    background-color: inherit; /* Zachowuje tło sekcji */
+}
+
+/* Inne style pozostają bez zmian */
+
+
+/* Stylizacja sekcji Strona Główna */
+#home {
+    background-color: #f4f4f4;
+}
+
+#home h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+#home p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Stylizacja sekcji O mnie */
+#about {
+    background-color: #fff;
+}
+
+#about h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#about p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Stylizacja sekcji Portfolio */
+#portfolio {
+    background-color: #f4f4f4;
+}
+
+#portfolio h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 200px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Dodanie komentarzy do głównych projektów */
+.comment {
+    margin-top: 10px;
+    color: #666;
+}
+
+/* Stylizacja dla przewijalnego paska z 15  projektami */
+.scroll-container {
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 20px;
+    padding: 20px 0;
+}
+
+.scroll-content {
+    display: flex;
+    align-items: center;
+}
+
+.small-gallery-item {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.small-gallery-item img {
+    width: 150px;  /* Szerokość prostokątna */
+    height: 100px; /* Wysokość prostokątna */
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+
+/* Stylizacja sekcji Kontakt */
+#contact {
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.contact-form, .contact-info {
+    flex: 1;
+    min-width: 300px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.contact-form h3, .contact-info h3, .contact-info h4 {
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    transition: border-color 0.3s;
+    font-size: 16px;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #333;
+    outline: none;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: flex-end;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+/* Stylizacja sekcji kontaktów */
+.contact-info p {
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #555;
+}
+
+
+/* Stylizacja stopki */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Animacje CSS */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+section {
+    animation: fadeIn 1s ease-in-out;
+}
+/* Media Queries for Responsive Design */
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .contact-container {
+        flex-direction: row;
+    }
+}
+
+/* Medium devices (tablets, 768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .contact-container {
+        flex-direction: row;
+    }
+}
+
+/* Small devices (phones, 600px to 767px) */
+@media (min-width: 600px) and (max-width: 767px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-form, .contact-info {
+        margin: 10px auto;
+        width: 80%;
+    }
+}
+
+/* Extra small devices (phones, less than 600px) */
+@media (max-width: 599px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-form, .contact-info {
+        margin: 10px auto;
+        width: 95%;
+    }
+}
