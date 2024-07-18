@@ -1,143 +1,112 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Nagłówek i Nawigacja -->
     <header>
         <nav>
-            <ul>
-                <li><a href="#home">Strona Główna</a></li>
-                <li><a href="#about">O mnie</a></li>
+            <div class="logo">My Brother's Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
         </nav>
     </header>
 
-    <!-- Sekcja Strona Główna -->
-    <section id="home">
-        <h1>Witaj na mojej stronie</h1>
-        <p>Krótki opis strony i celu.</p>
-    </section>
-
-    <!-- Sekcja O mnie -->
-    <section id="about">
-        <h2>O mnie</h2>
-        <p>Informacje o Twoim bracie, jego doświadczenie, umiejętności itp.</p>
-    </section>
-
-    <!-- Sekcja Portfolio -->
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <!-- Trzy główne projekty -->
-        <div class="gallery">
-            <div class="gallery-item">
-                <img src="images/project1.jpg" alt="Projekt 1">
-                <p>Projekt 1</p>
-                <p class="comment">Krótki komentarz do projektu 1.</p>
-            </div>
-            <div class="gallery-item">
-                <img src="images/project2.jpg" alt="Projekt 2">
-                <p>Projekt 2</p>
-                <p class="comment">Krótki komentarz do projektu 2.</p>
-            </div>
-            <div class="gallery-item">
-                <img src="images/project3.jpg" alt="Projekt 3">
-                <p>Projekt 3</p>
-                <p class="comment">Krótki komentarz do projektu 3.</p>
-            </div>
+    <section id="home" class="parallax home">
+        <div class="hero-content">
+            <h1>Welcome to My  Portfolio</h1>
+            <p>Discover amazing works and projects.</p>
+            <p>This website showcases the best works a passionate artist and designer. Explore the portfolio to see creative projects and get in touch for collaborations.</p>
         </div>
-        <!-- Przewijalny pasek z mniejszymi projektami -->
-        <div class="scroll-container">
-            <div class="scroll-content">
-                <!-- 15 mniejszych projektów -->
-                <div class="small-gallery-item"><img src="images/project4.jpg" alt="Projekt 4"></div>
-                <div class="small-gallery-item"><img src="images/project5.jpg" alt="Projekt 5"></div>
-                <div class="small-gallery-item"><img src="images/project6.jpg" alt="Projekt 6"></div>
-                <div class="small-gallery-item"><img src="images/project7.jpg" alt="Projekt 7"></div>
-                <div class="small-gallery-item"><img src="images/project8.jpg" alt="Projekt 8"></div>
-                <div class="small-gallery-item"><img src="images/project9.jpg" alt="Projekt 9"></div>
-                <div class="small-gallery-item"><img src="images/project10.jpg" alt="Projekt 10"></div>
-                <div class="small-gallery-item"><img src="images/project11.jpg" alt="Projekt 11"></div>
-                <div class="small-gallery-item"><img src="images/project12.jpg" alt="Projekt 12"></div>
-                <div class="small-gallery-item"><img src="images/project13.jpg" alt="Projekt 13"></div>
-                <div class="small-gallery-item"><img src="images/project14.jpg" alt="Projekt 14"></div>
-                <div class="small-gallery-item"><img src="images/project15.jpg" alt="Projekt 15"></div>
-                <div class="small-gallery-item"><img src="images/project16.jpg" alt="Projekt 16"></div>
-                <div class="small-gallery-item"><img src="images/project17.jpg" alt="Projekt 17"></div>
-                <div class="small-gallery-item"><img src="images/project18.jpg" alt="Projekt 18"></div>
+    </section>
+
+    <section id="about" class="parallax about">
+        <div class="parallax-container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="images/about-me.jpg" alt="About Me">
+                <div>
+                    <p>Hello! I'm Konrad, a passionate artist and designer. I specialize in [...]. This portfolio showcases some of my best works. Enjoy!</p>
+                </div>
             </div>
         </div>
     </section>
-<!-- Sekcja Kontakt -->
-<section id="contact" style="background-color: #fff;">
-    <h2>Kontakt</h2>
-    <div class="contact-container">
-        <!-- Lewa kolumna: Formularz kontaktowy -->
-        <div class="contact-form">
-            <h3>Skontaktuj się ze mną</h3>
-            <form>
-                <label for="name">Imię:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Wiadomość:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Wyślij</button>
-            </form>
-        </div>
-        <!-- Prawa kolumna: Informacje kontaktowe -->
-        <div class="contact-info">
-            <h3>Kontakt</h3>
-            <p>Email: kontakt@example.com</p>
-            <p>Telefon: +48 123 456 789</p>
-            <h4>Media społecznościowe</h4>
-            <p><a href="https://www.facebook.com" target="_blank">Facebook</a></p>
-            <p><a href="https://www.twitter.com" target="_blank">Twitter</a></p>
-            <p><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></p>
-        </div>
-    </div>
-</section>
 
+    <section id="portfolio" class="parallax portfolio">
+        <div class="parallax-container">
+            <h2>Portfolio</h2>
+            <div class="portfolio-grid">
+                <!-- First portfolio item with increased size -->
+                <div class="portfolio-item large">
+                    <img src="images/sample1.jpg" alt="Project 1">
+                    <div class="portfolio-item-info">
+                        <h3>Project Title 1</h3>
+                        <p>Short description of the project.</p>
+                    </div>
+                </div>
+                <!-- Horizontal scroll bar for additional images -->
+                <div class="horizontal-scroll">
+                    <div class="scroll-container">
+                        <img src="images/sample2.jpg" alt="Project 2" class="thumbnail">
+                        <img src="images/sample3.jpg" alt="Project 3" class="thumbnail">
+                        <!-- Add more images as needed -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Stopka -->
+    <section id="contact" class="parallax contact">
+        <div class="parallax-container contact-container">
+            <div class="contact-form">
+                <h2>Contact</h2>
+                <form>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p><strong>Address:</strong> 1234 Street Name, City, State, Zip Code</p>
+                <p><strong>Phone:</strong> (123) 456-7890</p>
+                <p><strong>Email:</strong> email@example.com</p>
+                <h3>Follow Me</h3>
+                <div class="social-icons">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2024 Twoje Imię. Wszelkie prawa zastrzeżone.</p>
+        <p>&copy; 2024 My Brother's Portfolio. All rights reserved.</p>
     </footer>
 
-    <!-- Skrypt JavaScript do płynnego przewijania -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
+    <!-- Modal Structure -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+    </div>
 
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Zapętlony pasek przewijania
-        const scrollContainer = document.querySelector('.scroll-container');
-        const scrollContent = document.querySelector('.scroll-content');
-
-        scrollContent.innerHTML += scrollContent.innerHTML; // Podwaja zawartość, aby zapętlić
-
-        let scrollAmount = 0;
-        function scrollLoop() {
-            scrollAmount++;
-            if (scrollAmount >= scrollContent.scrollWidth / 2) {
-                scrollAmount = 0;
-            }
-            scrollContainer.scrollLeft = scrollAmount;
-            requestAnimationFrame(scrollLoop);
-        }
-        scrollLoop();
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>

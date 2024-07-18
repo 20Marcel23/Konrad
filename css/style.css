@@ -1,277 +1,315 @@
-/* Globalne style */
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Stylizacja nagłówka i nawigacji */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
 header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    position: sticky;
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
     top: 0;
-    z-index: 1000; /* Utrzymuje nagłówek nad innymi elementami */
+    left: 0;
+    z-index: 1000;
 }
 
-/* Stylizacja sekcji strony */
-section {
-    padding: 60px 20px;
-    text-align: center;
-    position: sticky;
-    top: 60px; /* Odległość od góry, aby była widoczna część poprzedniej sekcji */
-    z-index: 500; /* Niższy indeks niż nagłówek */
-    background-color: inherit; /* Zachowuje tło sekcji */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 2rem;
 }
 
-/* Inne style pozostają bez zmian */
-
-
-/* Stylizacja sekcji Strona Główna */
-#home {
-    background-color: #f4f4f4;
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-#home h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+header .nav-links {
+    list-style: none;
+    display: flex;
 }
 
-#home p {
-    font-size: 18px;
-    color: #666;
+header .nav-links li {
+    margin-left: 2rem;
 }
 
-/* Stylizacja sekcji O mnie */
-#about {
-    background-color: #fff;
+header .nav-links a {
+    color: #fff;
+    text-decoration: none;
 }
 
-#about h2 {
-    font-size: 30px;
-    margin-bottom: 10px;
+header .burger {
+    display: none;
+    cursor: pointer;
 }
 
-#about p {
-    font-size: 16px;
-    color: #333;
+header .burger div {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 5px;
 }
 
-/* Stylizacja sekcji Portfolio */
-#portfolio {
-    background-color: #f4f4f4;
-}
-
-#portfolio h2 {
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-.gallery {
+/* Parallax sections */
+.parallax {
+    position: relative;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-}
-
-.gallery-item {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: 10px;
-    flex: 1 1 200px;
+    align-items: center;
+    color: #fff;
     text-align: center;
-    transition: transform 0.3s;
+    overflow: hidden;
 }
 
-.gallery-item:hover {
-    transform: scale(1.05);
+.parallax-container {
+    width: 100%;
+    padding: 8rem 2rem; /* Adjusted padding to allow overlap */
 }
 
-.gallery-item img {
-    max-width: 100%;
-    height: auto;
+.home {
+    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+.about .parallax-container {
+    background-image: url('../images/about-bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.portfolio .parallax-container {
+    background-image: url('../images/portfolio-bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.contact .parallax-container {
+    background-image: url('../images/contact-bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
     border-radius: 10px;
 }
 
-/* Dodanie komentarzy do głównych projektów */
-.comment {
-    margin-top: 10px;
-    color: #666;
+.hero-content h1 {
+    font-size: 3rem;
 }
 
-/* Stylizacja dla przewijalnego paska z 15  projektami */
-.scroll-container {
-    overflow: hidden;
-    white-space: nowrap;
-    margin-top: 20px;
-    padding: 20px 0;
-}
-
-.scroll-content {
+.about-content {
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-.small-gallery-item {
+.about img {
+    max-width: 300px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.portfolio-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio-item {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+/* First portfolio item with increased size */
+.portfolio-item.large {
+    width: 60%; /* Ensure it takes up 60% of the container width */
+}
+
+.portfolio-item img {
+    width: 100%;
+}
+
+.portfolio-item-info {
+    padding: 1rem;
+    color: #000;
+}
+
+/* Horizontal scroll bar for additional images */
+.horizontal-scroll {
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    margin-top: 2rem;
+}
+
+.scroll-container {
     display: inline-block;
-    margin: 0 10px;
 }
 
-.small-gallery-item img {
-    width: 150px;  /* Szerokość prostokątna */
-    height: 100px; /* Wysokość prostokątna */
+.thumbnail {
+    width: 100px;
+    height: 100px;
     object-fit: cover;
-    border-radius: 10px;
-    border: 1px solid #ddd;
+    margin-right: 10px;
+    cursor: pointer;
 }
 
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
 
-/* Stylizacja sekcji Kontakt */
-#contact {
-    background-color: #fff;
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
     text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .contact-container {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
     flex-wrap: wrap;
-    margin-top: 20px;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
 
 .contact-form, .contact-info {
     flex: 1;
-    min-width: 300px;
-    margin: 20px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 10px;
+    margin: 1rem;
 }
 
-.contact-form h3, .contact-info h3, .contact-info h4 {
-    margin-bottom: 20px;
+.contact-form h2, .contact-info h2, .contact-info h3 {
+    margin-bottom: 1rem;
 }
 
-.contact-form form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.contact-form label {
-    margin: 10px 0 5px;
-    font-weight: bold;
-    color: #333;
-}
-
-.contact-form input, .contact-form textarea {
+.contact-form form input,
+.contact-form form textarea {
     width: 100%;
-    max-width: 400px;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-bottom: 2px solid #ddd;
-    transition: border-color 0.3s;
-    font-size: 16px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-.contact-form input:focus, .contact-form textarea:focus {
-    border-color: #333;
-    outline: none;
-}
-
-.contact-form button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
+.contact-form form button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s;
-    align-self: flex-end;
 }
 
-.contact-form button:hover {
-    background-color: #555;
-}
-
-/* Stylizacja sekcji kontaktów */
 .contact-info p {
-    margin: 10px 0;
+    margin-bottom: 0.5rem;
 }
 
-.contact-info a {
-    color: #333;
+.social-icons {
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    margin: 0 0.5rem;
+    color: #fff;
     text-decoration: none;
-    transition: color 0.3s;
+    font-size: 1.5rem;
 }
 
-.contact-info a:hover {
-    color: #555;
-}
-
-
-/* Stylizacja stopki */
 footer {
-    background-color: #333;
-    color: white;
+    background: #333;
+    color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 1rem 0;
 }
 
-/* Animacje CSS */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+@media (max-width: 768px) {
+    header .nav-links {
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        top: 60px;
+        background: #333;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
     }
-    to {
-        opacity: 1;
+
+    header .nav-links.active {
+        transform: translateX(0);
     }
-}
 
-section {
-    animation: fadeIn 1s ease-in-out;
-}
-/* Media Queries for Responsive Design */
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-    .contact-container {
-        flex-direction: row;
+    header .burger {
+        display: block;
     }
-}
 
-/* Medium devices (tablets, 768px to 991px) */
-@media (min-width: 768px) and (max-width: 991px) {
-    .contact-container {
-        flex-direction: row;
+    .about-content {
+        flex-direction: column;
+        align-items: center;
     }
-}
 
-/* Small devices (phones, 600px to 767px) */
-@media (min-width: 600px) and (max-width: 767px) {
     .contact-container {
         flex-direction: column;
-    }
-
-    .contact-form, .contact-info {
-        margin: 10px auto;
-        width: 80%;
-    }
-}
-
-/* Extra small devices (phones, less than 600px) */
-@media (max-width: 599px) {
-    .contact-container {
-        flex-direction: column;
-    }
-
-    .contact-form, .contact-info {
-        margin: 10px auto;
-        width: 95%;
     }
 }
